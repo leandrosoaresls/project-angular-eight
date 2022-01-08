@@ -7,12 +7,15 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./to-dos.component.scss"],
 })
 export class ToDosComponent implements OnInit {
+  public toDos = [];
+
   constructor(private todosService: ToDosService) {}
 
   ngOnInit() {
     this.todosService.getToDos().subscribe(
-      (todos) => {
-        console.table(todos);
+      (toDos) => {
+        this.toDos = toDos;
+        console.table(toDos);
       },
       (error) => {}
     );

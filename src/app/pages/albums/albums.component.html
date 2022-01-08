@@ -1,1 +1,3 @@
-<p>albums works!</p>
+<ng-container *ngFor="let album of albums">
+  <app-card [card]="album"></app-card>
+</ng-container>

@@ -7,11 +7,14 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./albums.component.scss"],
 })
 export class AlbumsComponent implements OnInit {
+  public albums = [];
+
   constructor(private albumsService: AlbumsService) {}
 
   ngOnInit() {
     this.albumsService.getAlbums().subscribe(
       (albums) => {
+        this.albums = albums;
         console.table(albums);
       },
       (error) => console.error(error)
