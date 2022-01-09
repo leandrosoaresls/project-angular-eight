@@ -1,3 +1,6 @@
-<ng-container *ngFor="let album of albums">
-  <app-card [card]="album"></app-card>
-</ng-container>
+<div class="grid-container">
+  <div class="album__card-photo" *ngFor="let album of albums">
+    <img src="{{ album.url }}" />
+    <p>{{ album.title }}</p>
+  </div>
+</div>

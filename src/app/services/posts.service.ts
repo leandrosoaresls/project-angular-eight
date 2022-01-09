@@ -1,3 +1,4 @@
+import { Post } from "./../models/post.model";
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
@@ -11,8 +12,8 @@ const API_URL = environment.apiUrl;
 export class PostsService {
   constructor(private httpClient: HttpClient) {}
 
-  public getPosts(): Observable<any> {
+  public getPosts(): Observable<Post[]> {
     const endpoint = `posts`;
-    return this.httpClient.get<any>(`${API_URL}/${endpoint}`);
+    return this.httpClient.get<Post[]>(`${API_URL}/${endpoint}`);
   }
 }
