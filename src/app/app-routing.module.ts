@@ -1,18 +1,19 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+
 import { AlbumsComponent } from "./pages/albums/albums.component";
-import { PostsComponent } from "./pages/posts/posts.component";
 import { ToDosComponent } from "./pages/to-dos/to-dos.component";
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "posts",
+    redirectTo: "albums",
     pathMatch: "full",
   },
   {
+    // lazy loading
     path: "posts",
-    component: PostsComponent,
+    loadChildren: "./pages/posts/posts.module#PostsModule",
   },
   {
     path: "albums",

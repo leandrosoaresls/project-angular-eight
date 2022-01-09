@@ -1,3 +1,4 @@
+import { BreadcrumbModule } from "./components/breadcrumb/breadcrumb.module";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -7,20 +8,16 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { CardComponent } from "./components/card/card.component";
 import { HeaderComponent } from "./header/header.component";
 import { AlbumsComponent } from "./pages/albums/albums.component";
-import { PostsComponent } from "./pages/posts/posts.component";
 import { ToDosComponent } from "./pages/to-dos/to-dos.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
     AlbumsComponent,
     ToDosComponent,
     HeaderComponent,
-    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +28,7 @@ import { ToDosComponent } from "./pages/to-dos/to-dos.component";
     MatCheckboxModule,
     ReactiveFormsModule,
     FormsModule,
+    BreadcrumbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

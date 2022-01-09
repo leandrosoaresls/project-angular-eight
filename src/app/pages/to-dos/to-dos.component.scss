@@ -2,7 +2,21 @@
   width: 100%;
 }
 
+.grid-container {
+  display: grid;
+  grid-template:
+    "breadcrumb breadcrumb breadcrumb breadcrumb"
+    "card card card card";
+  padding: 10px;
+  grid-gap: 30px;
+}
+
+.todo-list__breadcrumb {
+  grid-area: breadcrumb;
+}
+
 .todo-list__card {
+  grid-area: card;
   margin: auto;
   display: flex;
   flex-direction: column;

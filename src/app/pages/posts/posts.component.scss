@@ -1,6 +1,18 @@
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   padding: 10px;
   grid-gap: 10px;
+}
+
+.posts__breadcrumb {
+  margin-bottom: 15px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.posts__add-post {
+  text-align: end;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }

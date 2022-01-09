@@ -1,8 +1,12 @@
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template: 'breadcrumb breadcrumb breadcrumb breadcrumb';
   padding: 10px;
   grid-gap: 30px;
+}
+
+.albums__breadcrumb {
+  grid-area: breadcrumb;
 }
 
 .album__card-photo {

@@ -1,6 +1,7 @@
 import { Album } from "./../../models/album.model";
 import { AlbumsService } from "./../../services/albums.service";
 import { Component, OnInit } from "@angular/core";
+import { MenuItem } from "src/app/components/breadcrumb/breadcrumb.component";
 
 @Component({
   selector: "app-albums",
@@ -9,6 +10,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AlbumsComponent implements OnInit {
   public albums: Album[];
+
+  public breadcrumb: MenuItem[] = [
+    {
+      label: "Albuns",
+    },
+  ];
 
   constructor(private albumsService: AlbumsService) {}
 

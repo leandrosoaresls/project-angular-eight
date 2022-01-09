@@ -1,24 +1,30 @@
-<div class="todo-list">
-  <div class="todo-list__card">
-    <input
-      class="todo-list__card__add-new-task"
-      placeholder="O que precisa ser feito?"
-      (keydown.enter)="addNewTask()"
-      [(ngModel)]="newTask"
-      type="text"
-    />
-    <div class="todo-list__card__list-wrapper">
-      <ul class="todo-list__card__list" *ngFor="let toDo of toDos">
-        <li class="todo-list__card__list__item">
-          <mat-checkbox
-            [(ngModel)]="toDo.completed"
-            [ngStyle]="{
-              'text-decoration': toDo.completed ? 'line-through' : null
-            }"
-            >{{ toDo.title }}</mat-checkbox
-          >
-        </li>
-      </ul>
+<section class="todo-list">
+  <div class="grid-container">
+    <app-breadcrumb
+      [model]="breadcrumb"
+      class="todo-list__breadcrumb"
+    ></app-breadcrumb>
+    <div class="todo-list__card">
+      <input
+        class="todo-list__card__add-new-task"
+        placeholder="O que precisa ser feito?"
+        (keydown.enter)="addNewTask()"
+        [(ngModel)]="newTask"
+        type="text"
+      />
+      <div class="todo-list__card__list-wrapper">
+        <ul class="todo-list__card__list" *ngFor="let toDo of toDos">
+          <li class="todo-list__card__list__item">
+            <mat-checkbox
+              [(ngModel)]="toDo.completed"
+              [ngStyle]="{
+                'text-decoration': toDo.completed ? 'line-through' : null
+              }"
+              >{{ toDo.title }}</mat-checkbox
+            >
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</section>

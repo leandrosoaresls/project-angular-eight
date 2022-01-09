@@ -1,5 +1,5 @@
 import { Album } from "./../models/album.model";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { environment } from "../../environments/environment";
@@ -14,6 +14,7 @@ export class AlbumsService {
 
   public getAlbums(): Observable<Album[]> {
     const endpoint = `albums/1/photos`;
+
     return this.httpClient.get<Album[]>(`${API_URL}/${endpoint}`);
   }
 }

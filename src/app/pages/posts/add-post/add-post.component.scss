@@ -1,0 +1,47 @@
+.add-post {
+  input {
+    height: 40px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  h2 {
+    color: #f08d79;
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
+
+  button {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 0%;
+    border: solid 1px #c0c0c0;
+    background-color: #dadada;
+    cursor: pointer;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template:
+    "breadcrumb breadcrumb breadcrumb"
+    "wrapper wrapper wrapper";
+  padding: 10px;
+  grid-gap: 10px;
+}
+
+.add-post__breadcrumb {
+  grid-area: breadcrumb;
+  margin-bottom: 15px;
+}
+
+.add-post__wrapper {
+  grid-area: wrapper;
+}

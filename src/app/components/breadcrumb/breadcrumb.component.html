@@ -1,0 +1,11 @@
+<ng-template [ngForOf]="model" let-end="last" let-item ngFor>
+  <span
+    [attr.id]="item.id"
+    [ngClass]="{ 'font-weight-bold': !!end, 'cursor-pointer': item.routerLink }"
+    [routerLinkActive]="'active'"
+    [routerLink]="item.routerLink"
+  >
+    {{ item.label }}
+  </span>
+  <img *ngIf="!end" class="ml-2 mr-2" src="/assets/images/icon-right.svg" />
+</ng-template>

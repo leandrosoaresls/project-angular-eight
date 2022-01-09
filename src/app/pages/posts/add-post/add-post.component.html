@@ -1,0 +1,26 @@
+<section class="add-post">
+  <div class="grid-container">
+    <app-breadcrumb
+      class="add-post__breadcrumb"
+      [model]="breadcrumb"
+    ></app-breadcrumb>
+    <div class="add-post__wrapper">
+      <h2>Adicionar Novo Post</h2>
+
+      <form
+        class="add-post__form"
+        (ngSubmit)="onSubmit(form)"
+        [formGroup]="form"
+      >
+        <h3>Titulo</h3>
+        <input formControlName="title" type="text" />
+
+        <h3>Conteúdo</h3>
+        <textarea formControlName="content" rows="10"></textarea>
+        <div>
+          <button type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

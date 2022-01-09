@@ -1,6 +1,10 @@
-<div class="grid-container">
-  <div class="album__card-photo" *ngFor="let album of albums">
-    <img src="{{ album.url }}" />
-    <p>{{ album.title }}</p>
+<section class="albums">
+  <div class="grid-container">
+    <app-breadcrumb class="albums__breadcrumb" [model]="breadcrumb"></app-breadcrumb>
+
+    <div class="album__card-photo" *ngFor="let album of albums">
+      <img src="{{ album.url }}" />
+      <p>{{ album.title }}</p>
+    </div>
   </div>
-</div>
+</section>

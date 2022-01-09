@@ -2,6 +2,7 @@ import { ToDosService } from "./../../services/to-dos.service";
 import { Component, OnInit } from "@angular/core";
 import { ToDo } from "src/app/models/to-do.model";
 import { _MatSlideToggleRequiredValidatorModule } from "@angular/material";
+import { MenuItem } from "src/app/components/breadcrumb/breadcrumb.component";
 
 @Component({
   selector: "app-to-dos",
@@ -11,6 +12,11 @@ import { _MatSlideToggleRequiredValidatorModule } from "@angular/material";
 export class ToDosComponent implements OnInit {
   public toDos: ToDo[];
   public newTask: string;
+  public breadcrumb: MenuItem[] = [
+    {
+      label: "To Do List",
+    },
+  ];
 
   constructor(private todosService: ToDosService) {}
 
