@@ -1,7 +1,3 @@
-.todo-list {
-  width: 100%;
-}
-
 .grid-container {
   display: grid;
   grid-template:
@@ -9,6 +5,10 @@
     "card card card card";
   padding: 10px;
   grid-gap: 30px;
+}
+
+.todo-list {
+  width: 100%;
 }
 
 .todo-list__breadcrumb {
