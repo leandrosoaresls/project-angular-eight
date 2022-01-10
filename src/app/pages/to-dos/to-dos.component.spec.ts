@@ -1,16 +1,27 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { BreadcrumbModule } from "./../../components/breadcrumb/breadcrumb.module";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ToDosComponent } from './to-dos.component';
+import { ToDosComponent } from "./to-dos.component";
+import { FormsModule } from "@angular/forms";
+import { MatCheckboxModule } from "@angular/material";
 
-describe('ToDosComponent', () => {
+describe("ToDosComponent", () => {
   let component: ToDosComponent;
   let fixture: ComponentFixture<ToDosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ToDosComponent ]
-    })
-    .compileComponents();
+      declarations: [ToDosComponent],
+      imports: [
+        BreadcrumbModule,
+        FormsModule,
+        MatCheckboxModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +30,7 @@ describe('ToDosComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

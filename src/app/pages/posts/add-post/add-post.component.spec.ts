@@ -1,16 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { BreadcrumbModule } from "./../../../components/breadcrumb/breadcrumb.module";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { AddPostComponent } from './add-post.component';
+import { AddPostComponent } from "./add-post.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-describe('AddPostComponent', () => {
+describe("AddPostComponent", () => {
   let component: AddPostComponent;
   let fixture: ComponentFixture<AddPostComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddPostComponent ]
-    })
-    .compileComponents();
+      declarations: [AddPostComponent],
+      imports: [
+        BreadcrumbModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule,
+      ],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +29,7 @@ describe('AddPostComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
