@@ -3,6 +3,7 @@
   grid-template:
     "breadcrumb breadcrumb breadcrumb breadcrumb"
     "card card card card";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 10px;
   grid-gap: 30px;
 }
@@ -22,11 +23,18 @@
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  width: 50%;
+  width: 70%;
   height: 500px;
   padding: 20px;
   overflow: hidden;
   font-family: "Caladea", serif;
+}
+
+@media (max-width: 800px) {
+  .todo-list__card {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .todo-list__card__list {
